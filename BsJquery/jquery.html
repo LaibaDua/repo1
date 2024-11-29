@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <img src="image/mocha.jpg" alt="" id="img">
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <button id="toggle">toggle</button>
+
+
+    <img src="image/Cappuccino.jpg" height="200px" width="300px" alt="" id="img1" style="display: none;">
+    <img src="image/americano.jpg" height="200px" width="300px" alt="" id="img2"  style="display: none;">
+    <img src="image/Café Breve.jpg" height="200px" width="300px" alt="" id="img3"  style="display: none;">
+    
+
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+
+
+    <button id="slideDown">slideDown</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideToggle">slideToggle</button>
+    
+
+    
+</body>
+<script>
+    $(document).ready(function(){
+        ///hide///
+        $("#hide").click(function(){
+            $("#img").hide();
+        });
+        //show//
+        $("#show").click(function(){
+            $("#img").show();
+        });
+        //toggle//
+        $("#toggle").click(function(){
+            $("#img").toggle();
+        });
+        
+        //fadeIn//
+        $("#fadeIn").click(function(){
+            $("#img1").fadeIn();
+            $("#img2").fadeIn("slow");
+            $("#img3").fadeIn(3000);
+        //fadeOut
+        });
+        $("#fadeOut").click(function(){
+            $("#img1").fadeOut();
+            $("#img2").fadeOut("slow");
+            $("#img3").fadeOut(3000);
+
+        });
+
+        //slideDown//
+        $("#slideDown").click(function(){
+            $("#img").slideDown()
+        })
+
+        //slideUp//
+        $("#slideUp").click(function(){
+            $("#img").slideUp()
+        })
+
+        //slideToggle//
+        $("#slideToggle").click(function(){
+            $("#img").slideToggle()
+        })
+
+    })
+
+    
+</script>
+</html>

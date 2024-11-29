@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <div id="mydiv"
+        style="background: darkslategrey; height: 100px; width: 100px; border-radius: 4px; position: relative;">
+
+    </div>
+    <button id="Animation">Start Animation</button>
+
+
+
+    <button id="stop">Stop</button>
+    <div id="panel" style="color: whitesmoke; background-color: burlywood; text-align: center; margin: 10px; padding: 10px;">Click to slide down the panel</div>
+    <div id="flip" style="color: whitesmoke; background-color: burlywood;  text-align: center; margin: 13px; padding: 15px; display: none;">Hello world</div>
+
+
+
+</body>
+<script>
+    $(document).ready(function () {
+        $("#Animation").click(function () {
+            $("#mydiv").animate({
+                left: "300px",
+                top: "300px",
+                height: "300px",
+                width: "300px",
+                opacity: "0.5",
+
+
+
+            })
+        })
+
+        $("#panel").click(function(){
+            $("#flip").slideToggle(3000)
+        })
+
+        $("#stop").click(function(){
+            $("#flip").stop()
+        })
+    })
+
+
+</script>
+
+</html>
